@@ -56,6 +56,18 @@
   transform: translate(-50%, -50%);
 }
 
+.story {
+  background: linear-gradient(
+    124deg,
+    #bcb6e6 1.72%,
+    #ded355 51.27%,
+    #7660ff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (min-width: 768px) {
   .logo:before {
     top: -140%;

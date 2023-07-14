@@ -2,7 +2,7 @@ const Note = () => {
   return (
     <svg
       viewBox="0 0 88 88"
-      className="lg:w-12 lg:h-12 xl:w-14 xl:h-14 note"
+      className="hidden lg:block lg:w-12 lg:h-12 xl:w-14 xl:h-14 note"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
