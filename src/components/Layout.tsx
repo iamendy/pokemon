@@ -9,7 +9,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <section className="font-manrope flex gap-x-2 px-4 pt-24 pb-9">
         <SideNav />
-        <main className="w-[90%] pt-1 ml-auto md:px-7">{children}</main>
+        <main className="w-[90%] pt-7 ml-auto md:px-7 lg:px-0 ">
+          {children}
+        </main>
       </section>
       <Footer />
     </main>

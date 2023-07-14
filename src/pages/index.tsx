@@ -6,16 +6,19 @@ export default function Home() {
   return (
     <Layout>
       <section>
-        <div className="flex flex-col gap-y-9">
+        <div className="flex flex-col gap-y-9 lg:flex-row lg:gap-x-4">
           <div>
-            <h3 className="font-medium">WELCOME</h3>
+            <h3 className="font-medium lg:text-[16px]">WELCOME</h3>
 
-            <h1 className="title font-bold text-xl leading-[32px] mt-3 mb-6 ">
+            <h1
+              className="title font-bold text-xl leading-[32px] mt-3 mb-6 md:text-2xl
+            lg:text-[40px] lg:leading-[52px] lg:mb-16 lg:font-medium"
+            >
               Analysis of Pokémon Stats Across Different Types: Guide to Build
               the Ultimate Team
             </h1>
 
-            <div className="flex flex-col gap-y-5">
+            <div className="flex flex-col gap-y-5 lg:text-[16px]">
               <p className="leading-[28px]">
                 Pokémon is one of the most popular franchise in the world that
                 features various creatures with unique abilities and attributes.
@@ -42,14 +45,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#433896] px-4 py-8 rounded-lg flex flex-col gap-y-5">
+            <div className="bg-[#433896] px-4 py-8 rounded-xl flex flex-col gap-y-5 lg:rounded-3xl lg:px-6">
               <div className="bg-purple px-4 py-1 font-bold w-fit leading-none rounded-2xl flex items-center justify-between gap-x-2">
                 <span className="bg-dark w-2 h-2 rounded-full inline-block"></span>
 
                 <span className="text-dark text-[14px]">Brief History</span>
               </div>
 
-              <div className="flex flex-col gap-y-5 text-light">
+              <div className="flex flex-col gap-y-5 text-light text-[14px]">
                 <p className="leading-[28px]">
                   Pokémon (short for Pocket Monsters) is a media franchise owned
                   by Japanese video game company Nintendo and created by Satoshi

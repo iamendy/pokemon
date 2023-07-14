@@ -2,7 +2,7 @@ import { Logo, Menu, LinkExt } from "@/icons";
 
 const Navbar = () => {
   return (
-    <nav className="overflow-hidden px-4 py-5 md:py-5 md:px-5 lg:py-6 lg:px-6 fixed top-0 w-full bg-dark">
+    <nav className="overflow-hidden px-4 py-5 md:py-5 md:px-5 lg:py-6 lg:px-12 fixed top-0 w-full bg-dark">
       <div className="flex items-center justify-between md:justify-start md:gap-x-9">
         <div className="logo relative">
           <Logo />
