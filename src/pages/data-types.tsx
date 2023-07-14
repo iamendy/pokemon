@@ -17,7 +17,7 @@ const DataStory = () => {
             proportion of Pokémon belonging to each type.
           </p>
 
-          <p className="text-light leading-[32px] hidden">
+          <p className="text-light leading-[32px] lg:hidden">
             This visualization will provide an overview of the prevalence of
             different types within the Pokémon dataset.
           </p>
