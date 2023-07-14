@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { Insight } from "../icons";
 
-const DataStory = () => {
+const DataTypes = () => {
   return (
     <Layout>
       <section className="flex flex-col ">
@@ -46,4 +46,4 @@ const DataStory = () => {
     </Layout>
   );
 };
-export default DataStory;
+export default DataTypes;
