@@ -1,12 +1,13 @@
 import Layout from "../components/Layout";
 import pokemon from "../../public/img/pokemon.png";
 import Image from "next/image";
+import { Note } from "../icons";
 
 export default function Home() {
   return (
     <Layout>
       <section>
-        <div className="flex flex-col gap-y-9 lg:flex-row lg:gap-x-4">
+        <div className="flex flex-col gap-y-9 lg:flex-row lg:gap-x-9 lg:items-center">
           <div>
             <h3 className="font-medium lg:text-[16px]">WELCOME</h3>
 
@@ -40,12 +41,17 @@ export default function Home() {
 
           <div className="flex flex-col gap-y-5">
             <div>
-              <div>
-                <Image src={pokemon} alt="pokemon" />
+              <div className="w-[100%] m-0">
+                <Image
+                  src={pokemon}
+                  alt="pokemon"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
             </div>
 
-            <div className="bg-[#433896] px-4 py-8 rounded-xl flex flex-col gap-y-5 lg:rounded-3xl lg:px-6">
+            <div className="bg-[#433896] relative px-4 py-8 rounded-xl flex flex-col gap-y-5 lg:rounded-3xl lg:px-12 xl:px-12">
+              <Note />
               <div className="bg-purple px-4 py-1 font-bold w-fit leading-none rounded-2xl flex items-center justify-between gap-x-2">
                 <span className="bg-dark w-2 h-2 rounded-full inline-block"></span>
 

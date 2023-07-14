@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const SideNav = () => {
   return (
-    <nav className="w-[10%] flex flex-col fixed left-0 pt-6 h-full lg:pt-16">
-      <div className="h-[10%] flex items-start pt-2 justify-center lg:h-[20%] ">
+    <nav className="w-[10%] flex flex-col fixed left-0 pt-6 h-full lg:pt-16 lg:static xl:pt-28">
+      <div className="h-[10%] flex items-start pt-2 justify-center lg:h-[30%]">
         <div className="page-holder relative">
           <div className="flex justify-center items-center border border-white w-[20px] h-[20px] lg:w-[40px] lg:h-[40px] rotate-45">
             <span className="-rotate-45 text-[12px] lg:text-[24px] font-bold">
