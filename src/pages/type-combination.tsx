@@ -10,7 +10,7 @@ const TypeCombination = () => {
         </h3>
 
         <div className="flex flex-col gap-y-5 lg:w-[90%]">
-          <p className="text-light leading-[32px] ">
+          <p className="text-light leading-[32px] lg:text-[20px]">
             Lastly, To further understand the diversity of Pokémon types, let's
             create a bubble chart to visualize the frequency of different type
             combinations. Each bubble represents a unique type combination, with

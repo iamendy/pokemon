@@ -1,7 +1,23 @@
-import Layout from "../components/Layout";
-import { Insight } from "../icons";
+import Layout from "@/components/Layout";
+import { Insight } from "@/icons";
+import BarChart from "@/components/BarChart";
+import types from "@/constants/types";
 
 const DataTypes = () => {
+  const chartData = {
+    labels: types.map((d) => d.type),
+    datasets: [
+      {
+        label: "Number of Pokémon",
+        data: types.map((d) => d.count),
+        backgroundColor: "#8255f2",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+    ],
+  };
   return (
     <Layout>
       <section className="flex flex-col ">
@@ -9,7 +25,7 @@ const DataTypes = () => {
           Visualization 1: Type distribution Bar chart
         </h3>
 
-        <div className="flex flex-col gap-y-5 lg:w-[90%]">
+        <div className="flex flex-col gap-y-5 lg:w-[90%] lg:text-[20px]">
           <p className="text-light leading-[32px] ">
             To begin our analysis, let's create a bar chart to visualize the
             distribution of Pokémon types. The X-axis will represent the
@@ -22,11 +38,9 @@ const DataTypes = () => {
             different types within the Pokémon dataset.
           </p>
         </div>
-
-        <div className="mt-10">
-          <img src="/img/types-chart.svg" alt="types chart" />
+        <div className="">
+          <BarChart chartData={chartData} />
         </div>
-
         <div className="bg-[#382747] mt-10 rounded-md p-3 flex gap-x-2 lg:items-center lg:gap-x-6">
           <div>
             <Insight />

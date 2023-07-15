@@ -19,15 +19,15 @@ export default function Home() {
               the Ultimate Team
             </h1>
 
-            <div className="flex flex-col gap-y-5 lg:text-[16px]">
-              <p className="leading-[28px]">
+            <div className="flex flex-col gap-y-5 xl:text-[20px]">
+              <p className="leading-[28px] xl:leading-[32px]">
                 Pokémon is one of the most popular franchise in the world that
                 features various creatures with unique abilities and attributes.
                 It’s a media and merchandising empire that has spawned TV shows,
                 video games, card games, and more.
               </p>
 
-              <p className="leading-[28px]">
+              <p className="leading-[28px] xl:leading-[32px]">
                 There are currently eighteen types of Pokémon, each with its own
                 strengths and weaknesses. Pokémon types include{" "}
                 <span className="text-yellow">

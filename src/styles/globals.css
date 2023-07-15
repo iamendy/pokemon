@@ -68,6 +68,35 @@
   -webkit-text-fill-color: transparent;
 }
 
+.conclusion::before {
+  content: "";
+  position: absolute;
+  width: 4000px;
+  height: 1px;
+  left: 100%;
+  top: 50%;
+  background-color: #7660ff;
+  transform: translateY(-50%);
+}
+
+.bar::before {
+  content: "Number of Pokémon";
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  font-weight: 500;
+  transform: rotate(-90deg);
+}
+
+.bar::after {
+  content: "Types of Pokémon";
+  position: absolute;
+  left: 50%;
+  top: -2%;
+  font-weight: 500;
+  transform: translateX(-50%);
+}
+
 @media (min-width: 768px) {
   .logo:before {
     top: -140%;

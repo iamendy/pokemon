@@ -35,11 +35,7 @@ const SideNav = () => {
             <div className="w-4 h-4 rounded-full bg-[#382747] p-2 group-hover:w-8 transition-all group-hover:bg-orange"></div>
           </Link>
 
-          <Link href="#" className="w-full group">
-            <div className="w-4 h-4 rounded-full bg-[#382747] p-2 group-hover:w-8 transition-all group-hover:bg-orange"></div>
-          </Link>
-
-          <Link href="#" className="w-full group">
+          <Link href="/conclusion" className="w-full group">
             <div className="w-4 h-4 rounded-full bg-[#382747] p-2 group-hover:w-8 transition-all group-hover:bg-orange"></div>
           </Link>
         </div>

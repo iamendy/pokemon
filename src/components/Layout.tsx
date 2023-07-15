@@ -4,7 +4,7 @@ import SideNav from "./SideNav";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="bg-dark text-white">
+    <main className="bg-dark text-white overflow-hidden">
       <div className="pancake lg:max-w-[1380px] lg:mx-auto">
         <Navbar />
         <div></div>

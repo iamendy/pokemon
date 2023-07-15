@@ -9,7 +9,7 @@ const StoryComparism = () => {
           Visualization 2: Stacked Bar Char – Type Comparison
         </h3>
 
-        <div className="flex flex-col gap-y-5 lg:w-[90%]">
+        <div className="flex flex-col gap-y-5 lg:w-[90%] lg:text-[20px]">
           <p className="text-light leading-[32px] ">
             Next, let's create a stacked bar chart to compare the average stats
             of Pokémon types side by side. Each bar will represent a type, and
