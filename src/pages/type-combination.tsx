@@ -1,7 +1,40 @@
 import Layout from "../components/Layout";
 import { Insight } from "../icons";
+import {
+  Chart as ChartJs,
+  Legend,
+  Tooltip,
+  BubbleController,
+  LinearScale,
+  PointElement,
+} from "chart.js";
+import { Bubble } from "react-chartjs-2";
+import bubbleData from "@/constants/bubble";
+import pokemon from "@/constants/pokemon";
+
+ChartJs.register(Legend, Tooltip, LinearScale, BubbleController, PointElement);
 
 const TypeCombination = () => {
+  //filtered list by types
+  const filterTypes = bubbleData.filter((value, index, self) => {
+    return self.findIndex((v) => v.type1 === value.type1) === index;
+  });
+
+  const chartData = {
+    labels: filterTypes?.map((d) => d.type1),
+    datasets: filterTypes?.map((filterD) => ({
+      label: `${filterD.type1} ${filterD.type2}`,
+      data: bubbleData
+        ?.filter((bubbleD) => bubbleD.type1 == filterD.type1)
+        .map((d) => ({
+          x: pokemon[d.type1]?.id,
+          y: pokemon[d.type2]?.id,
+          r: d.count,
+        })),
+      backgroundColor: pokemon[filterD.type1]?.color,
+    })),
+  };
+
   return (
     <Layout>
       <section className="flex flex-col ">
@@ -21,13 +54,14 @@ const TypeCombination = () => {
         </div>
 
         <div className="mt-10">
-          <img src="/img/graph.svg" alt="types chart" />
+          <Bubble data={chartData} />
         </div>
 
         <div className="bg-[#382747] mt-10 rounded-md p-3 flex gap-x-2 lg:items-center lg:gap-x-6">
           <div>
             <Insight />
           </div>
+
           <div className="flex flex-col gap-y-3 text-[#AB6D51] text-[14px] lg:gap-y-0">
             <h3 className="font-bold">Insight</h3>
             <p className="">

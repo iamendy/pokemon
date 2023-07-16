@@ -101,6 +101,23 @@ body {
   transform: translateX(-50%);
 } */
 
+.prize {
+  position: relative;
+  z-index: 1000;
+}
+
+.prize::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 60%;
+  background-color: transparent;
+  left: 50%;
+  top: -5%;
+  z-index: -1;
+  border: #7660ff solid 1px;
+}
+
 @media (min-width: 768px) {
   .logo:before {
     top: -140%;

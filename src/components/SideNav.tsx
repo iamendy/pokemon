@@ -5,7 +5,7 @@ const SideNav = () => {
   const router = useRouter();
 
   return (
-    <aside className="w-[10%] flex flex-col fixed left-0 pt-6 h-screen lg:pt-16 lg:static xl:pt-28 xl:w-20%]">
+    <aside className="w-[10%] flex flex-col fixed left-0 pt-6 gap-y-24 lg:gap-y-16 lg:pt-16 lg:static lg:h-scree xl:pt-28 xl:w-20%]">
       <div className="h-[10%] flex items-start pt-2 justify-center lg:h-[30%]">
         <div className="page-holder relative">
           <div className="flex justify-center items-center border border-white w-[20px] h-[20px] lg:w-[40px] lg:h-[40px] rotate-45">

@@ -28,7 +28,7 @@ const BarChart = ({ chartData }: { chartData: any }) => {
   };
 
   return (
-    <div className="bar relative mt-10 w-full">
+    <div className="bar relative mt-10 w-[90%]">
       <Bar data={chartData} options={options} />
     </div>
   );
