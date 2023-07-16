@@ -22,13 +22,13 @@ const BarChart = ({ chartData }: { chartData: any }) => {
     },
     plugins: {
       legend: {
-        display: false,
+        display: true,
       },
     },
   };
 
   return (
-    <div className="bar relative mt-10 lg:w-[90%] lg:mx-auto ">
+    <div className="bar relative mt-10 w-full">
       <Bar data={chartData} options={options} />
     </div>
   );

@@ -1,7 +1,93 @@
 import Layout from "../components/Layout";
 import { Insight } from "../icons";
+import BarChart from "@/components/BarChart";
+import stacked from "@/constants/v2";
 
 const StoryComparism = () => {
+  //filtered list by types
+  const filterTypes = stacked.filter((value, index, self) => {
+    return self.findIndex((v) => v.type === value.type) === index;
+  });
+
+  /* Individual properties */
+
+  const averageSpeed = stacked.filter((d) => d.measureName == "Avg. Speed");
+
+  const averageSpeedDefence = stacked.filter(
+    (d) => d.measureName == "Avg. Sp. Def"
+  );
+
+  const averageSpeedAttack = stacked.filter(
+    (d) => d.measureName == "Avg. Sp. Atk"
+  );
+
+  const averageHP = stacked.filter((d) => d.measureName == "Avg. HP");
+
+  const averageDefence = stacked.filter((d) => d.measureName == "Avg. Defense");
+
+  const averageAttack = stacked.filter((d) => d.measureName == "Avg. Attack");
+
+  //data composition
+  const chartData = {
+    labels: filterTypes.map((d) => d.type),
+    datasets: [
+      {
+        label: averageSpeed[0].measureName,
+        data: averageSpeed.map((d) => d.measureValue),
+        backgroundColor: "#5F23EF",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+      {
+        label: averageSpeedDefence[0].measureName,
+        data: averageSpeedDefence.map((d) => d.measureValue),
+        backgroundColor: "#8355F1",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+      {
+        label: averageSpeedAttack[0].measureName,
+        data: averageSpeedAttack.map((d) => d.measureValue),
+        backgroundColor: "#CBBBEF",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+      {
+        label: averageHP[0].measureName,
+        data: averageHP.map((d) => d.measureValue),
+        backgroundColor: "#CAF0F8",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+      {
+        label: averageDefence[0].measureName,
+        data: averageDefence.map((d) => d.measureValue),
+        backgroundColor: "#48CAE4",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+      {
+        label: averageAttack[0].measureName,
+        data: averageAttack.map((d) => d.measureValue),
+        backgroundColor: "#0096C7",
+        borderColor: "transparent",
+        width: 5,
+        borderWidth: 1,
+        borderRadius: 15,
+      },
+    ],
+  };
+
   return (
     <Layout>
       <section className="flex flex-col ">
@@ -19,8 +105,8 @@ const StoryComparism = () => {
           </p>
         </div>
 
-        <div className="mt-10">
-          <img src="/img/graph.svg" alt="types chart" />
+        <div>
+          <BarChart chartData={chartData} />
         </div>
 
         <div className="bg-[#382747] mt-10 rounded-md p-3 flex gap-x-2 lg:items-center lg:gap-x-6">
