@@ -10,13 +10,23 @@ const SideNav = () => {
         <div className="page-holder relative">
           <div className="flex justify-center items-center border border-white w-[20px] h-[20px] lg:w-[40px] lg:h-[40px] rotate-45">
             <span className="-rotate-45 text-[12px] lg:text-[24px] font-bold">
-              1
+              {router.asPath == "/"
+                ? "1"
+                : router.asPath == "/introduction"
+                ? "2"
+                : router.asPath == "/data-types"
+                ? "3"
+                : router.asPath == "/story-comparism"
+                ? "4"
+                : router.asPath == "/type-combination"
+                ? "5"
+                : "6"}
             </span>
           </div>
         </div>
       </div>
 
-      <div className="h-[30%] flex items-center justify-center xl:h-[20%]">
+      <div className="h-[30%] flex items-center justify-center xl:h-[20%] 2xl:h-[0%]">
         <div className="flex flex-col items-start pl-4 gap-y-9">
           <Link href="/" className="block w-full group">
             <div
@@ -29,10 +39,10 @@ const SideNav = () => {
             ></div>
           </Link>
 
-          <Link href="/data-story" className="block w-full group">
+          <Link href="/introduction" className="block w-full group">
             <div
               className={`${
-                router.asPath == "/data-story"
+                router.asPath == "/introduction"
                   ? "bg-orange w-8 lg:w-10"
                   : "bg-[#382747] w-4 group-hover:bg-orange group-hover:w-full"
               } 

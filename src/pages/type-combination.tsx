@@ -4,60 +4,166 @@ import {
   Chart as ChartJs,
   Legend,
   Tooltip,
-  BubbleController,
-  LinearScale,
+  RadarController,
+  RadialLinearScale,
+  LineController,
+  LineElement,
   PointElement,
 } from "chart.js";
-import { Bubble } from "react-chartjs-2";
-import bubbleData from "@/constants/bubble";
-import pokemon from "@/constants/pokemon";
+import { Radar } from "react-chartjs-2";
+import stacked from "@/constants/v2";
+import { useEffect, useState } from "react";
 
-ChartJs.register(Legend, Tooltip, LinearScale, BubbleController, PointElement);
+ChartJs.register(
+  Legend,
+  Tooltip,
+  RadialLinearScale,
+  RadarController,
+  LineController,
+  LineElement,
+  PointElement
+);
+
+const options = {
+  elements: {
+    line: {
+      borderWidth: 2,
+      fill: true,
+    },
+  },
+  scales: {
+    r: {
+      pointLabels: {
+        color: "white",
+      },
+      ticks: {
+        color: "#000000",
+        backgroundColor: "yellow",
+        opacity: 0,
+        fontSize: "16px",
+      },
+    },
+  },
+};
 
 const TypeCombination = () => {
+  const [typeA, setTypeA] = useState("Flying");
+  const [typeB, setTypeB] = useState("Rock");
+
   //filtered list by types
-  const filterTypes = bubbleData.filter((value, index, self) => {
-    return self.findIndex((v) => v.type1 === value.type1) === index;
+  const filterTypes = stacked.filter((value, index, self) => {
+    return self.findIndex((v) => v.type === value.type) === index;
   });
 
+  const filterLabels = stacked.filter((value, index, self) => {
+    return self.findIndex((v) => v.measureName === value.measureName) === index;
+  });
+
+  //get data for type A
+  const getDataA = () => {
+    return stacked.filter((d) => d.type == typeA).map((d) => d.measureValue);
+  };
+
+  //get data for type B
+  const getDataB = () => {
+    return stacked.filter((d) => d.type == typeB).map((d) => d.measureValue);
+  };
+
+  //monitors type A changes
+  useEffect(() => {
+    getDataA();
+    getDataB();
+  }, [typeA, typeB]);
+
   const chartData = {
-    labels: filterTypes?.map((d) => d.type1),
-    datasets: filterTypes?.map((filterD) => ({
-      label: `${filterD.type1} ${filterD.type2}`,
-      data: bubbleData
-        ?.filter((bubbleD) => bubbleD.type1 == filterD.type1)
-        .map((d) => ({
-          x: pokemon[d.type1]?.id,
-          y: pokemon[d.type2]?.id,
-          r: d.count,
-        })),
-      backgroundColor: pokemon[filterD.type1]?.color,
-    })),
+    //generate the features from data
+    labels: filterLabels?.map((d) => d.measureName),
+
+    datasets: [
+      {
+        label: `${typeA} Type`,
+        data: getDataA(),
+        fill: true,
+        color: "red",
+        backgroundColor: "rgba(222, 95, 85, 0.2)",
+        borderColor: "rgb(222, 95, 85)",
+        pointBackgroundColor: "rgb(255, 99, 132)",
+        pointBorderColor: "#fff",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgb(255, 99, 132)",
+      },
+      {
+        label: `${typeB} Type`,
+        data: getDataB(),
+        fill: false,
+        textColor: "#ffffff",
+        color: "blue",
+        backgroundColor: "rgba(118,96,255, 0.2)",
+        borderColor: "rgba(118,96,255)",
+        pointBackgroundColor: "blue",
+        pointBorderColor: "#fff",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgb(255, 99, 132)",
+      },
+    ],
   };
 
   return (
     <Layout>
       <section className="flex flex-col ">
         <h3 className="font-medium lg:text-[16px] uppercase mb-5 lg:mb-8">
-          Visualization 3: Type Combination Bubble Chart
+          Visualization 3: Radar Chart - Interactive comparation
         </h3>
 
         <div className="flex flex-col gap-y-5 lg:w-[90%]">
           <p className="text-light leading-[32px] lg:text-[20px]">
-            Lastly, To further understand the diversity of Pokémon types, let's
-            create a bubble chart to visualize the frequency of different type
-            combinations. Each bubble represents a unique type combination, with
-            the size of the bubble indicating the count of Pokémon with that
-            specific combination. This visualization will illustrate the variety
-            and popularity of type combinations.
+            Lastly, To further understand the strengths and weaknesses of
+            Pokémon types, Here is an interactive visualization tool, that helps
+            users compare two types of pokemon. Each radar represents a type,
+            with the pointers showing the average features being compared. This
+            chat gives better insights on how two types stack up against each
+            other in the battle field.
           </p>
         </div>
 
-        <div className="mt-10">
-          <Bubble data={chartData} />
+        <div className="flex flex-col gap-y-9 mt-10 lg:flex-row">
+          <div className="text-black flex bg-transparent justify-between bg-dark lg:w-[50%] lg:order-1 lg:justify-end gap-x-2">
+            <div className="p-3">
+              <select
+                className="p-3 outline-none rounded-lg bg-light"
+                onChange={(e) => setTypeA(e.target.value)}
+              >
+                <option value="">Select Type A</option>
+                {filterTypes?.map((d) => (
+                  <option key={d.type} value={d.type}>
+                    {d.type}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="p-3">
+              <select
+                className="p-3 outline-none rounded-lg bg-light"
+                onChange={(e) => setTypeB(e.target.value)}
+              >
+                <option value="">Select Type B</option>
+                {filterTypes?.map((d) => (
+                  <option key={d.type} value={d.type}>
+                    {d.type}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div className="lg:w-[50%]">
+            <div className="">
+              <Radar data={chartData} options={options}></Radar>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-[#382747] mt-10 rounded-md p-3 flex gap-x-2 lg:items-center lg:gap-x-6">
+        <div className="bg-[#382747] hidden mt-10 rounded-md p-3 gap-x-2 lg:items-center lg:gap-x-6">
           <div>
             <Insight />
           </div>

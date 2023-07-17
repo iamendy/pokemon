@@ -15,8 +15,8 @@ export default function Home() {
               className="title font-bold text-xl leading-[32px] mt-3 mb-6 md:text-2xl
             lg:text-[40px] lg:leading-[52px] lg:mb-16 lg:font-medium"
             >
-              Analysis of Pokémon Stats Across Different Types: Guide to Build
-              the Ultimate Team
+              Analysis of Pokémon Stats Across Different Types: Guide to
+              Building the Ultimate Team
             </h1>
 
             <div className="flex flex-col gap-y-5 xl:text-[20px]">
