@@ -73,7 +73,7 @@ bubble represents a unique type combination, with the size of the bubble
 indicating the count of Pokémon with that specific combination. This
 visualization will illustrate the variety and popularity of type combinations.
 
-![Type Comparison Stacked Bar Chart](/public/img/typeComparison.png)
+![Type Comparison Stacked Bar Chart](/public/img/typeCombination.png)
 
 **Insight:** The bubble chart will reveal the most common and rare type
 combinations in the Pokémon dataset. We might find that certain combinations,
