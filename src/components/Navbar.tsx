@@ -9,9 +9,7 @@ const Navbar = () => {
           <Logo />
         </Link>
 
-        <Menu />
-
-        <div className="hidden md:flex gap-x-5 md:text-base md:font-medium lg:gap-x-12 lg:text-[16px]">
+        <div className="md:flex gap-x-5 md:text-base md:font-medium lg:gap-x-12 lg:text-[16px]">
           <a
             href="https://www.kaggle.com/datasets/rohanpatil63/pokemon-dataset"
             className="flex items-center gap-x-1 hover:text-orange transition-colors"
