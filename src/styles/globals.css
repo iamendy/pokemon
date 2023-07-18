@@ -101,6 +101,14 @@ body {
   transform: translateX(-50%);
 } */
 
+.content {
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .logo:before {
     top: -140%;
