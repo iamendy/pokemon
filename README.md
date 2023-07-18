@@ -40,7 +40,7 @@ will indicate the count or proportion of Pokémon belonging to each type. This
 visualization will provide an overview of the prevalence of different types
 within the Pokémon dataset.
 
-![Type Distribution Bar Chart](/img/typeDistribution.png)
+![Type Distribution Bar Chart](/public/img/typeDistribution.png)
 
 **Insight:** The bar chart will reveal the most common and rare types among
 Pokémon. We might find that certain types, such as Normal or Water, are more
@@ -54,7 +54,7 @@ types side by side. Each bar will represent a type, and the stacked segments
 within each bar will correspond to different attributes (HP, Attack, Defense,
 Special Attack, Special Defense, and Speed).
 
-![Type Comparison Stacked Bar Chart](/img/typeComparison.png)
+![Type Comparison Stacked Bar Chart](/public/img/typeComparison.png)
 
 **Insight:** The stacked bar chart will allow us to compare the overall
 performance of types across multiple attributes. By observing the relative
@@ -73,7 +73,7 @@ bubble represents a unique type combination, with the size of the bubble
 indicating the count of Pokémon with that specific combination. This
 visualization will illustrate the variety and popularity of type combinations.
 
-![Type Comparison Stacked Bar Chart](/img/typeComparison.png)
+![Type Comparison Stacked Bar Chart](/public/img/typeComparison.png)
 
 **Insight:** The bubble chart will reveal the most common and rare type
 combinations in the Pokémon dataset. We might find that certain combinations,
