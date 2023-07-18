@@ -7,15 +7,18 @@ from the dataset provided.
 **Pokémon dataset used**:
 [www.kaggle.com/datasets/rohanpatil63/pokemon-dataset](https://www.kaggle.com/datasets/rohanpatil63/pokemon-dataset)
 
+**You can view the client side app here**:
+[https://pokemon-iamendy.vercel.app](https://pokemon-iamendy.vercel.app/)
+
 ## Installation
 
 This project contains Typescript files, JS libraries and stylesheets. To run it
-localy, clone this github repo, go into the project directory and install the
+locally, clone this github repo, go into the project directory and install the
 dependencies.
 
 ```bash
-  $ git clone this-project-github-link
-  $ cd this-project
+  $ git clone https://github.com/iamendy/pokemon.git
+  $ cd pokemon
   $ npm install
   $ npm run dev
 ```
