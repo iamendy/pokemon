@@ -118,7 +118,7 @@ teams and strategizing battles.
     as appropriate visualization techniques. Each technique serves a specific
     purpose: bar charts for comparing type distributions, stacked bar charts for
     overall average attribute stats, and bubble chart for comparing frequency of
-    type combinations.
+    type1 and type2 combinations.
 -   #### Uncovering Insights:
     By examining the visualizations, trainers can identify which types excel in
     specific attributes, which types have balanced performance across multiple
@@ -139,6 +139,6 @@ battles with a more informed and strategic mindset.
 Visualizations used in this project is created using:
 
 -   Tableau - For data analysis
--   ChartJS library for client side code
+-   ChartJS library - For client side code
 
 ## Screen Recording of the Visualization
