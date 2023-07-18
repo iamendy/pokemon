@@ -142,3 +142,7 @@ Visualizations used in this project is created using:
 -   ChartJS library - For client side code
 
 ## Screen Recording of the Visualization
+
+
+https://github.com/iamendy/pokemon/assets/22240834/8d47ff4c-1ffa-459b-9fbe-629c540e27dd
+
