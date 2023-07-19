@@ -7,7 +7,7 @@ data visualizations using Tableau and also a web application that tell the Poké
 [www.kaggle.com/datasets/rohanpatil63/pokemon-dataset](https://www.kaggle.com/datasets/rohanpatil63/pokemon-dataset)
 
 **You can view the client side app here**:
-[https://pokemon-iamendy.vercel.app](https://pokemon-iamendy.vercel.app/)
+[https://advs-angelhack.vercel.app/](https://advs-angelhack.vercel.app/)
 
 ## Installation
 
@@ -165,4 +165,4 @@ https://github.com/iamendy/pokemon/assets/22240834/8d47ff4c-1ffa-459b-9fbe-629c5
 ## Client Side App
 https://github.com/iamendy/pokemon/assets/22240834/eb164884-52cc-4913-ab23-4e4d858d889e
 
-View it here: [https://pokemon-iamendy.vercel.app](https://pokemon-iamendy.vercel.app/)
+View it here: [https://advs-angelhack.vercel.app/](https://advs-angelhack.vercel.app/)
