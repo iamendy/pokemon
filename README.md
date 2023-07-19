@@ -15,12 +15,30 @@ This project contains Typescript files, JS libraries and stylesheets. To run it
 locally, clone this github repo, go into the project directory and install the
 dependencies. The Visualization on this readme is generated using Tableau
 
+Clone the project
+
 ```bash
   $ git clone https://github.com/iamendy/pokemon.git
+```
+
+Go to the project directory
+
+```bash
   $ cd pokemon
+```
+
+Install dependencies
+
+```bash
   $ npm install
+```
+
+Start the server
+
+```bash
   $ npm run dev
 ```
+
 
 ## Data Story
 
@@ -143,3 +161,8 @@ Visualizations used in this project is created using:
 ## Screen Recording of the Visualization
 
 https://github.com/iamendy/pokemon/assets/22240834/8d47ff4c-1ffa-459b-9fbe-629c540e27dd
+
+## Client Side App
+https://github.com/iamendy/pokemon/assets/22240834/eb164884-52cc-4913-ab23-4e4d858d889e
+
+View it here: [https://pokemon-iamendy.vercel.app](https://pokemon-iamendy.vercel.app/)
