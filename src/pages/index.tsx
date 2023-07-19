@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import pokemon from "../../public/img/pokemon.png";
 import Image from "next/image";
 import { Note } from "../icons";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -9,17 +10,32 @@ export default function Home() {
       <section>
         <div className="flex flex-col gap-y-9 lg:flex-row lg:gap-x-9 lg:items-center">
           <div>
-            <h3 className="font-medium lg:text-[16px]">WELCOME</h3>
+            <motion.h3
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              className="font-medium lg:text-[16px] overflow-hidden"
+            >
+              WELCOME
+            </motion.h3>
 
-            <h1
+            <motion.h1
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
               className="title font-bold text-xl leading-[32px] mt-3 mb-6 md:text-2xl
-            lg:text-[40px] lg:leading-[52px] lg:mb-16 lg:font-medium"
+            lg:text-[40px] lg:leading-[52px] lg:mb-16 lg:font-medium overflow-hidden"
             >
               Analysis of Pokémon Stats Across Different Types: Guide to
               Building the Ultimate Team
-            </h1>
+            </motion.h1>
 
-            <div className="flex flex-col gap-y-5 xl:text-[20px]">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.3 }}
+              className="flex flex-col gap-y-5 xl:text-[20px]"
+            >
               <p className="leading-[28px] xl:leading-[32px]">
                 Pokémon is one of the most popular franchise in the world that
                 features various creatures with unique abilities and attributes.
@@ -36,10 +52,15 @@ export default function Home() {
                   fighting and fairy.
                 </span>
               </p>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex flex-col gap-y-5">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col gap-y-5"
+          >
             <div>
               <div className="w-[100%] m-0">
                 <Image
@@ -76,7 +97,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

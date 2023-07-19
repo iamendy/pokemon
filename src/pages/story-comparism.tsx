@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { Insight } from "../icons";
 import BarChart from "@/components/BarChart";
 import stacked from "@/constants/v2";
+import { motion } from "framer-motion";
 
 const StoryComparism = () => {
   //filtered list by types
@@ -91,18 +92,28 @@ const StoryComparism = () => {
   return (
     <Layout>
       <section className="flex flex-col ">
-        <h3 className="font-medium lg:text-[16px] uppercase mb-5 lg:mb-8">
+        <motion.h3
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
+          className="font-medium lg:text-[16px] uppercase mb-5 lg:mb-8"
+        >
           Visualization 2: Stacked Bar Char – Stats Overview
-        </h3>
+        </motion.h3>
 
-        <div className="flex flex-col gap-y-5 lg:w-[90%] lg:text-[20px]">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-col gap-y-5 lg:w-[90%] lg:text-[20px]"
+        >
           <p className="text-light leading-[32px] ">
             Next, we create a stacked bar chart that compares the average stats
             of Pokémon types side by side. Each bar represents a type, and the
             stacked segments within type corresponds to the type's attributes
             (HP, Attack, Defense, Special Attack, Special Defense, and Speed).
           </p>
-        </div>
+        </motion.div>
 
         <div>
           <BarChart chartData={chartData} />

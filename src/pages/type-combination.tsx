@@ -13,6 +13,7 @@ import {
 import { Radar } from "react-chartjs-2";
 import stacked from "@/constants/v2";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 ChartJs.register(
   Legend,
@@ -111,20 +112,28 @@ const TypeCombination = () => {
   return (
     <Layout>
       <section className="flex flex-col ">
-        <h3 className="font-medium lg:text-[16px] uppercase mb-5 lg:mb-8">
+        <motion.h3
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
+          className="font-medium lg:text-[16px] uppercase mb-5 lg:mb-8"
+        >
           Visualization 3: Radar Chart - Interactive comparation
-        </h3>
+        </motion.h3>
 
-        <div className="flex flex-col gap-y-5 lg:w-[90%]">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-col gap-y-5 lg:w-[90%]"
+        >
           <p className="text-light leading-[32px] lg:text-[20px]">
             Lastly, To further understand the strengths and weaknesses of
             Pokémon types, Here is an interactive visualization tool, that helps
             users compare two types of pokemon. Each radar represents a type,
-            with the pointers showing the average features being compared. This
-            chat gives better insights on how two types stack up against each
-            other in the battle field.
+            with the pointers showing the average features being compared.
           </p>
-        </div>
+        </motion.div>
 
         <div className="flex flex-col gap-y-9 mt-10 lg:flex-row">
           <div className="text-black flex bg-transparent justify-between bg-dark lg:w-[50%] lg:order-1 lg:justify-end gap-x-2">
@@ -168,18 +177,9 @@ const TypeCombination = () => {
             <Insight />
           </div>
 
-          <div className="flex flex-col gap-y-3 text-[#AB6D51] text-[14px] lg:gap-y-0">
+          <div className="flex  flex-col gap-y-3 text-[#AB6D51] text-[14px] lg:gap-y-0">
             <h3 className="font-bold">Insight</h3>
-            <p className="">
-              The bubble chart will reveal the most common and rare type
-              combinations in the Pokémon dataset. We might find that certain
-              combinations, such as Normal-Flying, Grass-Poison & Bug-Flying,
-              are more prevalent, while others, like Electric-Dragon,
-              Ghost-Fighting, etc are less common. It also shows there are only
-              50 extremely rare combination types with only one occurrence. This
-              insight can help trainers in identifying unique or niche type
-              combinations for their teams.
-            </p>
+            <p className=""></p>
           </div>
         </div>
       </section>
