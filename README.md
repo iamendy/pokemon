@@ -1,8 +1,7 @@
 # Data Analyis and Visualization of Pokémon Dataset
 
-In this project, we performed data analysis of Pokémon dataset. We will create
-data visualizations that tell a story & highlight patterns to reveal insights
-from the dataset provided.
+In this project, we performed data analysis of Pokémon dataset. We created
+data visualizations using Tableau and also a web application that tell the Pokémon story & highlight patterns to reveal insights from the dataset provided.
 
 **Pokémon dataset used**:
 [www.kaggle.com/datasets/rohanpatil63/pokemon-dataset](https://www.kaggle.com/datasets/rohanpatil63/pokemon-dataset)
@@ -14,7 +13,7 @@ from the dataset provided.
 
 This project contains Typescript files, JS libraries and stylesheets. To run it
 locally, clone this github repo, go into the project directory and install the
-dependencies.
+dependencies. The Visualization on this readme is generated using Tableau
 
 ```bash
   $ git clone https://github.com/iamendy/pokemon.git
@@ -108,27 +107,27 @@ attributes of Pokémon based on their types. The goal is to uncover insights and
 patterns that can help trainers make informed decisions when building their
 teams and strategizing battles.
 
--   #### Selecting Relevant Attributes:
-    The attributes chosen for analysis (HP, Attack, Defense, Special Attack,
-    Special Defense, and Speed) are key indicators of a Pokémon's combat
-    abilities.
--   #### Choosing Visualization Techniques:
-    To effectively convey the information and facilitate comparisons, a
-    combination of bar chart, stacked bar chart, and bubble chart are selected
-    as appropriate visualization techniques. Each technique serves a specific
-    purpose: bar charts for comparing type distributions, stacked bar charts for
-    overall average attribute stats, and bubble chart for comparing frequency of
-    type1 and type2 combinations.
--   #### Uncovering Insights:
-    By examining the visualizations, trainers can identify which types excel in
-    specific attributes, which types have balanced performance across multiple
-    attributes, and which types exhibit variability in attribute distribution. .
--   #### Empowering Decision-Making:
-    The ultimate objective of this data story is to empower trainers to make
-    better decisions based on the analyzed information. By understanding the
-    different types and their attribute distributions, trainers can
-    strategically assemble teams that capitalize on type advantages and increase
-    their chances of success in the battle field.
+- #### Selecting Relevant Attributes:
+  The attributes chosen for analysis (HP, Attack, Defense, Special Attack,
+  Special Defense, and Speed) are key indicators of a Pokémon's combat
+  abilities.
+- #### Choosing Visualization Techniques:
+  To effectively convey the information and facilitate comparisons, a
+  combination of bar chart, stacked bar chart, and bubble chart are selected
+  as appropriate visualization techniques. Each technique serves a specific
+  purpose: bar charts for comparing type distributions, stacked bar charts for
+  overall average attribute stats, and bubble chart for comparing frequency of
+  type1 and type2 combinations.
+- #### Uncovering Insights:
+  By examining the visualizations, trainers can identify which types excel in
+  specific attributes, which types have balanced performance across multiple
+  attributes, and which types exhibit variability in attribute distribution. .
+- #### Empowering Decision-Making:
+  The ultimate objective of this data story is to empower trainers to make
+  better decisions based on the analyzed information. By understanding the
+  different types and their attribute distributions, trainers can
+  strategically assemble teams that capitalize on type advantages and increase
+  their chances of success in the battle field.
 
 By following this thought process, the data story provides trainers with
 actionable insights derived from the Pokémon CSV file, allowing them to approach
@@ -138,11 +137,9 @@ battles with a more informed and strategic mindset.
 
 Visualizations used in this project is created using:
 
--   Tableau - For data analysis
--   ChartJS library - For client side code
+- Tableau - For data analysis
+- ChartJS library - For client side code
 
 ## Screen Recording of the Visualization
 
-
 https://github.com/iamendy/pokemon/assets/22240834/8d47ff4c-1ffa-459b-9fbe-629c540e27dd
-
